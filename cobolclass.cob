@@ -1,6 +1,6 @@
        >>SOURCE FORMAT FREE
 IDENTIFICATION DIVISION.
-PROGRAM-ID. coboltut.
+PROGRAM-ID. cobolclass.
 AUTHOR. Love Bellinder.
 
 DATE-WRITTEN.  18/07/2023.
