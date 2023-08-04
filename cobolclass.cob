@@ -35,5 +35,14 @@ end-if
 if Age < 18 then
        display "You cant vote"
 end-if
-            
+if Age <=5 then
+       display "Du går på dagis"    
+end-if
+if Age >= 19 then
+       display "Du har slutat skolan"
+end-if
+if Age > 5 and Age < 19 then
+compute Grade = Age - 5
+display "Du går i " Grade ":an"
+end-if       
             STOP RUN.
