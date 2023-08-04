@@ -15,6 +15,8 @@ FILE SECTION.
 WORKING-STORAGE SECTION.
 01 Age pic 99 value 0.
 01 Grade pic 99 value 0.
+01 GradeZeroRemover pic 9 value 0.
+01 GradeGymnasium pic 9 value 0.
 01 Score pic x(1) value "B".
 01 CanVoteFlag pic 9 value 0.
        88 CanVote value 1.
@@ -30,10 +32,10 @@ PROCEDURE DIVISION.
 display "Enter Age : " with no advancing
 accept Age
 if Age >= 18 then
-       display "You can vote"
+       display "Du får rösta"
 end-if
 if Age < 18 then
-       display "You cant vote"
+       display "Du får inte rösta"
 end-if
 if Age <=5 then
        display "Du går på dagis"    
@@ -41,8 +43,18 @@ end-if
 if Age >= 19 then
        display "Du har slutat skolan"
 end-if
-if Age > 5 and Age < 19 then
-compute Grade = Age - 5
-display "Du går i " Grade ":an"
-end-if       
+if Age >= 6 and Age < 16 then
+       compute GradeZeroRemover = Age - 6
+       display "Du går i " GradeZeroRemover ":an"
+end-if
+if Age >= 16 and < 18 then
+       compute Grade = Age - 6
+       compute GradeGymnasium = Grade - 9
+       display "Du går i " GradeGymnasium ":a ring"
+end-if 
+if Age = 18 then
+       compute Grade = Age - 6
+       compute GradeGymnasium = Grade - 9
+       display "Du går i " GradeGymnasium ":de ring"
+    
             STOP RUN.
