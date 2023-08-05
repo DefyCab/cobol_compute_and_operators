@@ -29,7 +29,7 @@ WORKING-STORAGE SECTION.
        88 ANumber value "0" THRU "9".
 *> Bullion 88 sets conditional-value
 PROCEDURE DIVISION.
-display "Enter Age : " with no advancing
+display "Hur gammal är du? : " with no advancing
 accept Age
 if Age >= 18 then
        display "Du får rösta"
@@ -37,7 +37,7 @@ end-if
 if Age < 18 then
        display "Du får inte rösta"
 end-if
-if Age <=5 then
+if Age <= 5 then
        display "Du går på dagis"    
 end-if
 if Age >= 19 then
