@@ -56,5 +56,25 @@ if Age = 18 then
        compute Grade = Age - 6
        compute GradeGymnasium = Grade - 9
        display "Du går i " GradeGymnasium ":de ring"
+end-if    
+if Score is PassingScore then
+       display "You Passed"
+else
+       display "You failed"
+end-if
+if Score is not numeric then
+display Score " is not a number"
+end-if
+if age >= 18 then 
+       set CanVote to true
+else       
+       set CantVote to true
+ end-if
+ if CanVoteFlag = 1 
+ display "You can vote"
+ end-if
+ if CanVoteFlag = 0
+ display "You can't vote"
+ end-if
     
             STOP RUN.
